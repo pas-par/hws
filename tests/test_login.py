@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 @pytest.mark.parametrize("items", [('standard_user', 'secret_sauce'),
                                    ('problem_user', 'secret_sauce'),
                                    ('performance_glitch_user', 'secret_sauce')])
-def test_auth_(driver, items):
+def test_auth_positive(driver, items):
     log, password = items
     driver.get('https://www.saucedemo.com/')
     driver.implicitly_wait(10)
@@ -21,7 +21,7 @@ def test_auth_(driver, items):
 @pytest.mark.failed_auth
 @pytest.mark.parametrize("items", [('standard_users', 'secret'),
                                    ('problem_', 'sesauce'), ])
-def test_auth_wrong(driver, items):
+def test_auth_negative(driver, items):
     log, password = items
     driver.get('https://www.saucedemo.com/')
     driver.implicitly_wait(1)
