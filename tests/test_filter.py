@@ -1,8 +1,8 @@
-import time
+
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
-import pytest
+
 
 
 def test_filter_by_a_to_z(driver, login_by_standard_user):
