@@ -64,3 +64,4 @@ def test_remove_to_cart_from_card(driver, login_by_standard_user):
     button_text = driver.find_element(By.CSS_SELECTOR, '.btn_inventory').text
 
     assert button_text == 'Add to cart'
+

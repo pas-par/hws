@@ -19,4 +19,5 @@ def login_by_standard_user(driver):
     driver.find_element(By.ID, "password").send_keys(f"secret_sauce")
     driver.find_element(By.ID, "login-button").click()
     yield
-#сделать фикстуру для клика
+
+
